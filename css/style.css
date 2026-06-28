@@ -176,28 +176,34 @@ img {
     font-size: 42px;
     color: #43281a;
 }
-
 .carrusel {
     width: 100%;
-    display: grid;
-    grid-template-columns: 60px 1fr 60px;
-    gap: 15px;
-    align-items: center;
+}
+
+.flecha {
+    display: none;
 }
 
 .carrusel-ventana {
     width: 100%;
-    overflow: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth;
 }
 
 .menu-lista {
     display: flex;
     gap: 18px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
+    width: max-content;
 }
 
+.carrusel-ventana::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carrusel-ventana::-webkit-scrollbar-thumb {
+    background: #4a2412;
+    border-radius: 10px;
+}
 .menu-lista::-webkit-scrollbar {
     display: none;
 }
