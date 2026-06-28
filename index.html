@@ -10,181 +10,493 @@
 
 <body>
 
-    <header class="header">
-        <div class="contenedor nav-contenedor">
-            <a href="#" class="logo">Velvet Coffee</a>
+<header class="header">
+    <div class="contenedor nav-contenedor">
 
-            <nav class="nav">
-                <a href="#inicio">Inicio</a>
-                <a href="#menu">Menú</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
+        <a href="#inicio" class="logo">Velvet Coffee</a>
+
+        <nav class="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#menu">Menú</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+
+    <div class="contenedor hero-contenido">
+
+        <div class="hero-texto">
+
+            <span class="etiqueta">Café artesanal</span>
+
+            <h1>Tu rincón de café con estilo</h1>
+
+            <p>
+                Disfruta café, postres y platillos preparados con ingredientes
+                seleccionados en un ambiente cálido y elegante.
+            </p>
+
+            <div class="hero-extra">
+                <img src="img/interior con gente.png"
+                     alt="Ambiente Velvet Coffee">
+            </div>
+
+            <a href="#menu" class="boton">
+                Ver menú
+            </a>
+
         </div>
-    </header>
 
-    <main>
+        <div class="hero-imagen">
 
-        <section class="hero" id="inicio">
-            <div class="contenedor hero-contenido">
+            <img src="img/interior de la cafeteriaclientes.png"
+                 alt="Interior Velvet Coffee">
 
-                <div class="hero-texto">
-                    <span class="etiqueta">Café artesanal</span>
+        </div>
 
-                    <h1>Tu rincón de café con estilo</h1>
+    </div>
 
-                    <p>
-                        Disfruta café, postres y platillos preparados con ingredientes
-                        seleccionados en un ambiente cálido y elegante.
-                    </p>
+</section>
 
-                    <div class="hero-extra">
-                        <img src="img/interior con gente.png" alt="Ambiente de Velvet Coffee">
-                    </div>
+<!-- ========================================= -->
+<!-- CARRUSEL 1 -->
+<!-- ========================================= -->
 
-                    <a href="#menu" class="boton">Ver menú</a>
-                </div>
+<section class="menu" id="menu">
 
-                <div class="hero-imagen">
-                    <img src="img/interior de la cafeteriaclientes.png" alt="Interior de Velvet Coffee con clientes">
-                </div>
+<div class="contenedor">
 
-            </div>
-        </section>
+<div class="titulo-seccion">
 
-        <section class="menu" id="menu">
-            <div class="contenedor">
+<span>Especialidades</span>
 
-                <div class="titulo-seccion">
-                    <span>Especialidades</span>
-                    <h2>Nuestro menú destacado</h2>
-                </div>
+<h2>Nuestro menú destacado</h2>
 
-                <div class="carrusel">
-                    <button class="flecha" id="btnIzquierda">❮</button>
+</div>
 
-                    <div class="carrusel-ventana">
-                        <div class="menu-lista" id="menuLista">
+<div class="carrusel">
 
-                            <article class="tarjeta">
-                                <img src="img/mocha.jpeg" alt="Mocha Tiramisú">
-                                <h3>Mocha Tiramisú</h3>
-                                <p>Capas de soletilla con espresso, mascarpone y cacao.</p>
-                                <strong>$3.00</strong>
-                            </article>
+<button class="flecha flecha-izquierda">
+❮
+</button>
 
-                            <article class="tarjeta">
-                                <img src="img/tarta de queso.jpeg" alt="Tarta de queso">
-                                <h3>Tarta de Queso</h3>
-                                <p>Tarta artesanal con coulis de frutos rojos.</p>
-                                <strong>$3.50</strong>
-                            </article>
+<div class="carrusel-ventana">
 
-                            <article class="tarjeta">
-                                <img src="img/frapuccino.png" alt="Frapuccino">
-                                <h3>Frapuccino</h3>
-                                <p>Bebida fría, cremosa y perfecta para la tarde.</p>
-                                <strong>$4.00</strong>
-                            </article>
+<div class="menu-lista">
 
-                            <article class="tarjeta">
-                                <img src="img/rissoto.png" alt="Risotto de Champiñones">
-                                <h3>Risotto de Champiñones</h3>
-                                <p>Risotto cremoso con champiñones y parmesano.</p>
-                                <strong>$5.00</strong>
-                            </article>
+<article class="tarjeta">
 
-                            <article class="tarjeta">
-                                <img src="img/pizza.png" alt="Pizza Margherita">
-                                <h3>Pizza Margherita</h3>
-                                <p>Masa madre, tomate San Marzano, mozzarella y albahaca.</p>
-                                <strong>$6.00</strong>
-                            </article>
+<img src="img/mocha.jpeg" alt="Mocha Tiramisú">
 
-                            <article class="tarjeta">
-                                <img src="img/croaisant.png" alt="Croissant de almendra">
-                                <h3>Croissant de Almendra</h3>
-                                <p>Hojaldre artesanal con crema de almendras.</p>
-                                <strong>$2.00</strong>
-                            </article>
+<h3>Mocha Tiramisú</h3>
 
-                            <article class="tarjeta">
-                                <img src="img/mousse de chocolate.jpeg" alt="Mousse de chocolate">
-                                <h3>Mousse de Chocolate (Premium)</h3>
-                                <p>
-                                    Mousse de chocolate belga de alta calidad, con un toque de crema
-                                    de avellanas y chocolate oscuro. Un pecado refinado.
-                                </p>
-                                <strong>$5.50</strong>
-                            </article>
+<p>
+Capas de soletilla con espresso,
+mascarpone y cacao.
+</p>
 
-                            <article class="tarjeta">
-                                <img src="img/red velvelt.jpeg" alt="Red Velvet">
-                                <h3>Red Velvet</h3>
-                                <p>
-                                    Tarta aterciopelada de cacao sutil y glaseado de queso crema
-                                    artesanal. Un pecado delicioso.
-                                </p>
-                                <strong>$3.50</strong>
-                            </article>
+<strong>$3.00</strong>
 
-                        </div>
-                    </div>
+</article>
 
-                    <button class="flecha" id="btnDerecha">❯</button>
-                </div>
+<article class="tarjeta">
 
-            </div>
-        </section>
+<img src="img/tarta de queso.jpeg"
+alt="Tarta de queso">
 
-        <section class="nosotros" id="nosotros">
-            <div class="contenedor nosotros-grid">
+<h3>Tarta de Queso</h3>
 
-                <div class="nosotros-imagen">
-                    <img src="img/cafeteria.png" alt="Interior de Velvet Coffee">
-                </div>
+<p>
+Tarta artesanal con coulis
+de frutos rojos.
+</p>
 
-                <div class="nosotros-texto">
-                    <span>Sobre nosotros</span>
+<strong>$3.50</strong>
 
-                    <h2>Una experiencia cálida en cada taza</h2>
+</article>
 
-                    <p>
-                        En Velvet Coffee creemos que cada visita debe sentirse especial.
-                        Combinamos café artesanal, postres caseros y un ambiente acogedor
-                        para crear momentos memorables.
-                    </p>
+<article class="tarjeta">
 
-                    <div class="beneficios">
-                        <div>
-                            <strong>☕</strong>
-                            <p>Café artesanal</p>
-                        </div>
+<img src="img/frapuccino.png"
+alt="Frapuccino">
 
-                        <div>
-                            <strong>🍰</strong>
-                            <p>Postres frescos</p>
-                        </div>
+<h3>Frapuccino</h3>
 
-                        <div>
-                            <strong>✨</strong>
-                            <p>Ambiente elegante</p>
-                        </div>
-                    </div>
-                </div>
+<p>
+Bebida fría, cremosa
+y perfecta para la tarde.
+</p>
 
-            </div>
-        </section>
+<strong>$4.00</strong>
 
-    </main>
+</article>
 
-    <section class="contacto" id="contacto">
+<article class="tarjeta">
+
+<img src="img/red velvelt.jpeg"
+alt="Red Velvet">
+
+<h3>Red Velvet</h3>
+
+<p>
+Tarta aterciopelada de cacao
+con queso crema artesanal.
+</p>
+
+<strong>$3.50</strong>
+
+</article>
+
+</div>
+
+</div>
+
+<button class="flecha flecha-derecha">
+
+❯
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- CARRUSEL 2 - PLATILLOS SALADOS -->
+<!-- ========================================= -->
+
+<section class="menu">
 
     <div class="contenedor">
 
         <div class="titulo-seccion">
+            <span>Salados</span>
+            <h2>Platillos Salados</h2>
+        </div>
+
+        <div class="carrusel">
+
+            <button class="flecha flecha-izquierda">❮</button>
+
+            <div class="carrusel-ventana">
+
+                <div class="menu-lista">
+
+                    <article class="tarjeta">
+                        <img src="img/pizza.png" alt="Pizza Margherita">
+                        <h3>Pizza Margherita</h3>
+                        <p>Pizza artesanal con mozzarella, tomate y albahaca fresca.</p>
+                        <strong>$6.00</strong>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/rissoto.png" alt="Risotto de Champiñones">
+                        <h3>Risotto de Champiñones</h3>
+                        <p>Risotto cremoso preparado con champiñones y queso parmesano.</p>
+                        <strong>$5.00</strong>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/tostada de aguacate.png" alt="Tostada de Aguacate">
+                        <h3>Tostada de Aguacate</h3>
+                        <p>Pan artesanal con aguacate, huevo pochado y brotes verdes.</p>
+                        <strong>$6.50</strong>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/pan integral clasico con tocinop.jpg" alt="Bagel Clásico">
+                        <h3>Bagel Clásico</h3>
+                        <p>Bagel con tocino, tomate fresco y lechuga crujiente.</p>
+                        <strong>$6.50</strong>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/ensalada tropical.jpg" alt="Ensalada Tropical">
+                        <h3>Ensalada Tropical</h3>
+                        <p>Ensalada fresca con camarones, mango, almendras y vegetales.</p>
+                        <strong>$7.50</strong>
+                    </article>
+
+                </div>
+
+            </div>
+
+            <button class="flecha flecha-derecha">❯</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- CARRUSEL 3 - BEBIDAS -->
+<!-- ========================================= -->
+
+<section class="menu">
+
+    <div class="contenedor">
+
+        <div class="titulo-seccion">
+            <span>Bebidas</span>
+            <h2>Bebidas Especiales</h2>
+        </div>
+
+        <div class="carrusel">
+
+            <button class="flecha flecha-izquierda">❮</button>
+
+            <div class="carrusel-ventana">
+
+                <div class="menu-lista">
+
+                    <article class="tarjeta">
+                        <img src="img/mocha.jpeg" alt="Colección matcha Velvet">
+                        <h3>Colección Frappé Velvet</h3>
+                        <p>Selección de bebidas frías con café, matcha y sabores naturales.</p>
+                        <strong>$4.50</strong>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/espreso.jpg" alt="Espresso Clásico">
+                        <h3>Espresso Clásico</h3>
+                        <p>un shot de café puro con un  aroma inconfundible.</p>
+                        <strong>$2.50</strong>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/espresso clasico.jpg" alt="Latte Velvet">
+                        <h3>Latte Velvet</h3>
+                        <p>Espresso con leche vaporizada y suave arte en espuma.</p>
+                        <strong>$3.75</strong>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/te de mansanilla.jpg" alt="Té de Manzanilla">
+                        <h3>Té de Manzanilla</h3>
+                        <p>Infusión natural con aroma delicado y efecto relajante.</p>
+                        <strong>$2.75</strong>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/bebida de romero.jpg" alt="Crema de Romero">
+                        <h3>Crema de Romero</h3>
+                        <p>Bebida cremosa con café y un delicado toque de romero.</p>
+                        <strong>$4.25</strong>
+                    </article>
+
+                </div>
+
+            </div>
+
+            <button class="flecha flecha-derecha">❯</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- CARRUSEL 4 - POSTRES -->
+<!-- ========================================= -->
+
+<section class="menu">
+
+    <div class="contenedor">
+
+        <div class="titulo-seccion">
+            <span>Postres</span>
+            <h2>Dulces Artesanales</h2>
+        </div>
+
+        <div class="carrusel">
+
+            <button class="flecha flecha-izquierda">❮
+
+            </button>
+
+            <div class="carrusel-ventana">
+
+                <div class="menu-lista">
+
+                    <article class="tarjeta">
+                        <img src="img/mousse de chocolate.jpeg" alt="Mousse de Chocolate">
+                        <h3>Mousse de Chocolate</h3>
+                        <p>Chocolate belga con crema de avellanas y textura suave.</p>
+                        <strong>$5.50</strong>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/red velvelt.jpeg" alt="Red Velvet">
+                        <h3>Red Velvet</h3>
+                        <p>Tarta de cacao con glaseado artesanal de queso crema.</p>
+                        <strong>$3.50</strong>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/croaisant.png" alt="Croissant de Almendra">
+                        <h3>Croissant de Almendra</h3>
+                        <p>Hojaldre artesanal relleno de crema de almendras.</p>
+                        <strong>$2.00</strong>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/tarta de queso.jpeg" alt="Tarta de Queso">
+                        <h3>Tarta de Queso</h3>
+                        <p>Cheesecake artesanal acompañado de frutos rojos.</p>
+                        <strong>$3.50</strong>
+                    </article>
+
+                </div>
+
+            </div>
+
+            <button class="flecha flecha-derecha">❯
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- CARRUSEL 5 - ACTIVIDADES -->
+<!-- ========================================= -->
+
+<section class="menu">
+
+    <div class="contenedor">
+
+        <div class="titulo-seccion">
+            <span>Experiencias</span>
+            <h2>Actividades en Velvet Coffee</h2>
+        </div>
+
+        <div class="carrusel">
+
+            <button class="flecha flecha-izquierda">❮</button>
+
+            <div class="carrusel-ventana">
+
+                <div class="menu-lista">
+
+                    <article class="tarjeta">
+                        <img src="img/musica-vivo.png" alt="Música en vivo">
+                        <h3>Música en Vivo</h3>
+                        <p>Disfruta noches especiales con artistas locales mientras compartes un delicioso café.</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/juegos-mesa.png" alt="Juegos de mesa">
+                        <h3>Juegos de Mesa</h3>
+                        <p>Comparte momentos divertidos con amigos y familia en un ambiente acogedor.</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/tabla-gourmet.png" alt="Tabla Gourmet">
+                        <h3>Tablas para Compartir</h3>
+                        <p>La opción perfecta para disfrutar una tarde de conversación y buen café.</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/interior con gente.png" alt="Zona de estudio">
+                        <h3>Zona de Estudio</h3>
+                        <p>Un espacio tranquilo con Wi-Fi para trabajar, estudiar o leer.</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/cafeteria.png" alt="Eventos">
+                        <h3>Eventos Especiales</h3>
+                        <p>Celebraciones, reuniones y actividades pensadas para compartir grandes momentos.</p>
+                    </article>
+
+                </div>
+
+            </div>
+
+            <button class="flecha flecha-derecha">❯</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- NOSOTROS -->
+<!-- ========================================= -->
+
+<section class="nosotros" id="nosotros">
+
+    <div class="contenedor nosotros-grid">
+
+        <div class="nosotros-imagen">
+            <img src="img/cafeteria.png" alt="Interior Velvet Coffee">
+        </div>
+
+        <div class="nosotros-texto">
+
+            <span>Sobre Nosotros</span>
+
+            <h2>Una experiencia cálida en cada taza</h2>
+
+            <p>
+                En Velvet Coffee creemos que cada visita debe convertirse en un
+                momento especial. Nuestro compromiso es ofrecer café de alta
+                calidad, postres artesanales y platillos preparados con
+                ingredientes frescos en un ambiente elegante y acogedor.
+            </p>
+
+            <div class="beneficios">
+
+                <div>
+                    <strong>☕</strong>
+                    <p>Café Premium</p>
+                </div>
+
+                <div>
+                    <strong>🍰</strong>
+                    <p>Postres Artesanales</p>
+                </div>
+
+                <div>
+                    <strong>💻</strong>
+                    <p>Wi-Fi Gratis</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- CONTACTO -->
+<!-- ========================================= -->
+
+<section class="contacto" id="contacto">
+
+    <div class="contenedor">
+
+        <div class="titulo-seccion">
+
             <span>Contáctanos</span>
-            <h2>Visítanos o escríbenos</h2>
+
+            <h2>Visítanos</h2>
+
         </div>
 
         <div class="contacto-grid">
@@ -193,7 +505,7 @@
 
                 <div class="dato">
                     <h3>📍 Dirección</h3>
-                    <p>Av. Central #123, Santa Ana, El Salvador</p>
+                    <p>Santa Ana, El Salvador</p>
                 </div>
 
                 <div class="dato">
@@ -228,14 +540,31 @@
 
 </section>
 
-    <footer class="footer" id="contacto">
-        <div class="contenedor footer-contenido">
-            <h2>Velvet Coffee</h2>
-            <p>Gracias por visitar nuestro rincón de café con estilo.</p>
-            <small>© 2026 Velvet Coffee. Todos los derechos reservados.</small>
-        </div>
-    </footer>
+</main>
 
-    <script src="js/script.js"></script>
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="footer">
+
+    <div class="contenedor footer-contenido">
+
+        <h2>Velvet Coffee</h2>
+
+        <p>
+            Gracias por visitar nuestro rincón de café con estilo.
+        </p>
+
+        <small>
+            © 2026 Velvet Coffee. Todos los derechos reservados.
+        </small>
+
+    </div>
+
+</footer>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>

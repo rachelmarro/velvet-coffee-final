@@ -1,41 +1,33 @@
-const menuLista = document.getElementById("menuLista");
-const btnIzquierda = document.getElementById("btnIzquierda");
-const btnDerecha = document.getElementById("btnDerecha");
+document.addEventListener("DOMContentLoaded", () => {
+    const carruseles = document.querySelectorAll(".carrusel");
 
-let posicion = 0;
+    carruseles.forEach((carrusel) => {
+        const lista = carrusel.querySelector(".menu-lista");
+        const ventana = carrusel.querySelector(".carrusel-ventana");
+        const izquierda = carrusel.querySelector(".flecha-izquierda");
+        const derecha = carrusel.querySelector(".flecha-derecha");
+        const tarjeta = carrusel.querySelector(".tarjeta");
 
-function moverCarrusel(direccion) {
-    const tarjeta = document.querySelector(".tarjeta");
-    const ventana = document.querySelector(".carrusel-ventana");
+        let posicion = 0;
 
-    if (!tarjeta || !ventana) return;
+        derecha.addEventListener("click", () => {
+            const ancho = tarjeta.offsetWidth + 18;
+            const maxScroll = lista.scrollWidth - ventana.offsetWidth;
 
-    const estilos = window.getComputedStyle(menuLista);
-    const gap = parseInt(estilos.columnGap) || 18;
+            posicion += ancho;
+            if (posicion > maxScroll) posicion = 0;
 
-    const anchoTarjeta = tarjeta.offsetWidth + gap;
-    const totalTarjetas = document.querySelectorAll(".tarjeta").length;
-    const tarjetasVisibles = Math.floor(ventana.offsetWidth / anchoTarjeta);
+            lista.style.transform = `translateX(-${posicion}px)`;
+        });
 
-    const limite = totalTarjetas - tarjetasVisibles;
+        izquierda.addEventListener("click", () => {
+            const ancho = tarjeta.offsetWidth + 18;
+            const maxScroll = lista.scrollWidth - ventana.offsetWidth;
 
-    posicion += direccion;
+            posicion -= ancho;
+            if (posicion < 0) posicion = maxScroll;
 
-    if (posicion < 0) {
-        posicion = limite;
-    }
-
-    if (posicion > limite) {
-        posicion = 0;
-    }
-
-    menuLista.style.transform = `translateX(-${posicion * anchoTarjeta}px)`;
-}
-
-btnDerecha.addEventListener("click", () => moverCarrusel(1));
-btnIzquierda.addEventListener("click", () => moverCarrusel(-1));
-
-window.addEventListener("resize", () => {
-    posicion = 0;
-    menuLista.style.transform = "translateX(0)";
+            lista.style.transform = `translateX(-${posicion}px)`;
+        });
+    });
 });

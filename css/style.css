@@ -580,3 +580,55 @@ img {
         font-size: 18px;
     }
 }
+
+
+.menu + .menu {
+    padding-top: 40px;
+}
+
+.menu:nth-of-type(even) {
+    background: #f8f1e8;
+}
+
+.carrusel {
+    margin-bottom: 20px;
+}
+
+.tarjeta {
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjeta img {
+    border-radius: 0;
+}
+
+.tarjeta strong {
+    display: block;
+    margin-top: auto;
+}
+
+.menu-lista {
+    will-change: transform;
+}
+
+/* CELULAR - CARRUSELES */
+@media (max-width: 700px) {
+    .menu + .menu {
+        padding-top: 35px;
+    }
+
+    .tarjeta {
+        min-height: 520px;
+    }
+
+    .tarjeta img {
+        height: 180px;
+    }
+
+    .carrusel {
+        grid-template-columns: 45px 1fr 45px;
+    }
+}
