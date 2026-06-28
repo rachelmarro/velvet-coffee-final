@@ -2,20 +2,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const carruseles = document.querySelectorAll(".carrusel");
 
     carruseles.forEach((carrusel) => {
-        const lista = carrusel.querySelector(".menu-lista");
+        const ventana = carrusel.querySelector(".carrusel-ventana");
         const izquierda = carrusel.querySelector(".flecha-izquierda");
         const derecha = carrusel.querySelector(".flecha-derecha");
 
-        izquierda.addEventListener("click", () => {
-            lista.scrollBy({
-                left: -280,
+        derecha.addEventListener("click", () => {
+            ventana.scrollBy({
+                left: 300,
                 behavior: "smooth"
             });
         });
 
-        derecha.addEventListener("click", () => {
-            lista.scrollBy({
-                left: 280,
+        izquierda.addEventListener("click", () => {
+            ventana.scrollBy({
+                left: -300,
                 behavior: "smooth"
             });
         });
