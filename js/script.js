@@ -1,23 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const carruseles = document.querySelectorAll(".carrusel");
+const menuLista = document.getElementById("menuLista");
+const btnIzquierda = document.getElementById("btnIzquierda");
+const btnDerecha = document.getElementById("btnDerecha");
 
-    carruseles.forEach((carrusel) => {
-        const ventana = carrusel.querySelector(".carrusel-ventana");
-        const izquierda = carrusel.querySelector(".flecha-izquierda");
-        const derecha = carrusel.querySelector(".flecha-derecha");
+let posicion = 0;
+const anchoTarjeta = 238;
 
-        derecha.addEventListener("click", () => {
-            ventana.scrollBy({
-                left: 300,
-                behavior: "smooth"
-            });
-        });
+btnDerecha.addEventListener("click", () => {
+    posicion += anchoTarjeta;
 
-        izquierda.addEventListener("click", () => {
-            ventana.scrollBy({
-                left: -300,
-                behavior: "smooth"
-            });
-        });
-    });
+    if (posicion > menuLista.scrollWidth - 900) {
+        posicion = 0;
+    }
+
+    menuLista.style.transform = `translateX(-${posicion}px)`;
+});
+
+btnIzquierda.addEventListener("click", () => {
+    posicion -= anchoTarjeta;
+
+    if (posicion < 0) {
+        posicion = menuLista.scrollWidth - 900;
+    }
+
+    menuLista.style.transform = `translateX(-${posicion}px)`;
 });

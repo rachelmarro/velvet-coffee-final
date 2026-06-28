@@ -178,22 +178,34 @@ img {
 }
 
 .flecha {
-    display: none;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: #4a2412;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 20;
+}
 .carrusel {
     width: 100%;
     display: grid;
-    grid-template-columns: 45px 1fr 45px;
-    gap: 10px;
+    grid-template-columns: 60px 1fr 60px;
+    gap: 15px;
     align-items: center;
 }
 
 .carrusel-ventana {
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
 }
+
+.menu-lista {
+    display: flex;
+    gap: 18px;
+    transition: transform 0.4s ease;
+} 
 
 .carrusel-ventana::-webkit-scrollbar {
     display: none;
