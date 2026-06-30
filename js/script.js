@@ -1,26 +1,37 @@
-const menuLista = document.getElementById("menuLista");
-const btnIzquierda = document.getElementById("btnIzquierda");
-const btnDerecha = document.getElementById("btnDerecha");
+const carruseles = document.querySelectorAll(".carrusel");
 
-let posicion = 0;
-const anchoTarjeta = 238;
+carruseles.forEach((carrusel) => {
+    const menuLista = carrusel.querySelector(".menu-lista");
+    const btnIzquierda = carrusel.querySelector(".flecha-izquierda");
+    const btnDerecha = carrusel.querySelector(".flecha-derecha");
 
-btnDerecha.addEventListener("click", () => {
-    posicion += anchoTarjeta;
+    let posicion = 0;
 
-    if (posicion > menuLista.scrollWidth - 900) {
-        posicion = 0;
-    }
+    btnDerecha.addEventListener("click", () => {
+        const tarjeta = menuLista.querySelector(".tarjeta");
+        const anchoTarjeta = tarjeta.offsetWidth + 18;
+        const maxScroll = menuLista.scrollWidth - carrusel.querySelector(".carrusel-ventana").offsetWidth;
 
-    menuLista.style.transform = `translateX(-${posicion}px)`;
-});
+        posicion += anchoTarjeta;
 
-btnIzquierda.addEventListener("click", () => {
-    posicion -= anchoTarjeta;
+        if (posicion > maxScroll) {
+            posicion = 0;
+        }
 
-    if (posicion < 0) {
-        posicion = menuLista.scrollWidth - 900;
-    }
+        menuLista.style.transform = `translateX(-${posicion}px)`;
+    });
 
-    menuLista.style.transform = `translateX(-${posicion}px)`;
+    btnIzquierda.addEventListener("click", () => {
+        const tarjeta = menuLista.querySelector(".tarjeta");
+        const anchoTarjeta = tarjeta.offsetWidth + 18;
+        const maxScroll = menuLista.scrollWidth - carrusel.querySelector(".carrusel-ventana").offsetWidth;
+
+        posicion -= anchoTarjeta;
+
+        if (posicion < 0) {
+            posicion = maxScroll;
+        }
+
+        menuLista.style.transform = `translateX(-${posicion}px)`;
+    });
 });
