@@ -37,3 +37,29 @@ carruseles.forEach((carrusel) => {
         menuLista.style.transform = "translateX(0)";
     });
 });
+
+const formResena = document.getElementById("formResena");
+const listaResenas = document.getElementById("listaResenas");
+
+if (formResena) {
+    formResena.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const nombre = document.getElementById("nombreCliente").value;
+        const comentario = document.getElementById("comentarioCliente").value;
+        const estrellas = document.getElementById("estrellasCliente").value;
+
+        const nuevaResena = document.createElement("div");
+        nuevaResena.classList.add("resena");
+
+        nuevaResena.innerHTML = `
+            <p>“${comentario}”</p>
+            <h3>${nombre}</h3>
+            <span>${estrellas}</span>
+        `;
+
+        listaResenas.appendChild(nuevaResena);
+
+        formResena.reset();
+    });
+}

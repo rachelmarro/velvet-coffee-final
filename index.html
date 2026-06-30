@@ -16,10 +16,12 @@
             <a href="#inicio" class="logo">Velvet Coffee</a>
 
             <nav class="nav">
+                
                 <a href="#inicio">Inicio</a>
                 <a href="#menu">Menú</a>
                 <a href="#nosotros">Nosotros</a>
                 <a href="#contacto">Contacto</a>
+                <a href="#resenas">Reseñas</a>
             </nav>
         </div>
     </header>
@@ -577,6 +579,58 @@
 
             </div>
         </section>
+
+        <!-- RESEÑAS -->
+<section class="resenas" id="resenas">
+    <div class="contenedor">
+
+        <div class="titulo-seccion">
+            <span>Opiniones</span>
+            <h2>Reseñas de nuestros clientes</h2>
+        </div>
+
+        <div class="resenas-grid" id="listaResenas">
+
+            <div class="resena">
+                <p>“Un lugar muy acogedor, el café estaba delicioso y la atención fue excelente.”</p>
+                <h3>María López</h3>
+                <span>★★★★★</span>
+            </div>
+
+            <div class="resena">
+                <p>“Me encantó el ambiente, perfecto para estudiar, conversar y disfrutar postres.”</p>
+                <h3>Carlos Méndez</h3>
+                <span>★★★★★</span>
+            </div>
+
+            <div class="resena">
+                <p>“Los postres son muy buenos y el lugar tiene una decoración elegante.”</p>
+                <h3>Ana Rodríguez</h3>
+                <span>★★★★☆</span>
+            </div>
+
+        </div>
+
+        <form class="form-resena" id="formResena">
+            <h3>Deja tu reseña</h3>
+
+            <input type="text" id="nombreCliente" placeholder="Tu nombre" required>
+
+            <textarea id="comentarioCliente" placeholder="Escribe tu experiencia" required></textarea>
+
+            <select id="estrellasCliente" required>
+                <option value="★★★★★">5 estrellas</option>
+                <option value="★★★★☆">4 estrellas</option>
+                <option value="★★★☆☆">3 estrellas</option>
+                <option value="★★☆☆☆">2 estrellas</option>
+                <option value="★☆☆☆☆">1 estrella</option>
+            </select>
+
+            <button type="submit">Enviar reseña</button>
+        </form>
+
+    </div>
+</section>
 
         <!-- CONTACTO -->
         <section class="contacto" id="contacto">

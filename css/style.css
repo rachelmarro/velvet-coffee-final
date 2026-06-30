@@ -591,3 +591,97 @@ img {
         font-size: 18px;
     }
 }
+
+/* RESEÑAS */
+
+.resenas {
+    background: #f6ebdc;
+    padding: 80px 0;
+}
+
+.resenas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+.resena {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.resena p {
+    color: #5d4739;
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+.resena h3 {
+    font-family: Georgia, serif;
+    color: #4a2412;
+    margin-bottom: 8px;
+}
+
+.resena span {
+    color: #c1811f;
+    font-size: 22px;
+}
+
+.form-resena {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-resena h3 {
+    font-family: Georgia, serif;
+    color: #4a2412;
+    text-align: center;
+    font-size: 28px;
+}
+
+.form-resena input,
+.form-resena textarea,
+.form-resena select {
+    padding: 14px;
+    border: 1px solid #ead8c2;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-resena textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+.form-resena button {
+    background: #4a2412;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-resena button:hover {
+    background: #c1811f;
+}
+
+@media (max-width: 900px) {
+    .resenas-grid {
+        grid-template-columns: 1fr;
+    }
+}
