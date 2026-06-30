@@ -59,7 +59,7 @@ img {
     color: white;
     text-decoration: none;
     font-size: 17px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .nav a:hover {
@@ -82,10 +82,11 @@ img {
 
 .hero-texto {
     padding-left: 55px;
-    padding-top: 0;
 }
 
-.etiqueta {
+.etiqueta,
+.titulo-seccion span,
+.nosotros-texto span {
     color: #c1811f;
     font-weight: bold;
     text-transform: uppercase;
@@ -117,8 +118,8 @@ img {
     height: 170px;
     object-fit: cover;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .18);
-    transition: .3s;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    transition: 0.3s;
 }
 
 .hero-extra img:hover {
@@ -133,7 +134,7 @@ img {
     padding: 15px 28px;
     border-radius: 10px;
     font-weight: bold;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .boton:hover {
@@ -141,14 +142,13 @@ img {
 }
 
 .hero-imagen img {
-    width: 100%;
     height: 560px;
     object-fit: cover;
     border-radius: 20px;
-    box-shadow: 0 18px 35px rgba(0, 0, 0, .20);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.20);
 }
 
-/* MENU */
+/* SECCIONES DEL MENÚ */
 
 .menu {
     background: #fffaf5;
@@ -156,18 +156,17 @@ img {
     overflow: hidden;
 }
 
+.menu + .menu {
+    padding-top: 40px;
+}
+
+.menu:nth-of-type(even) {
+    background: #f8f1e8;
+}
+
 .titulo-seccion {
     text-align: center;
     margin-bottom: 40px;
-}
-
-.titulo-seccion span,
-.nosotros-texto span {
-    color: #c1811f;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 14px;
 }
 
 .titulo-seccion h2,
@@ -175,6 +174,30 @@ img {
     font-family: Georgia, serif;
     font-size: 42px;
     color: #43281a;
+}
+
+/* CARRUSELES */
+
+.carrusel {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.carrusel-ventana {
+    width: 100%;
+    overflow: hidden;
+}
+
+.menu-lista {
+    display: flex;
+    gap: 18px;
+    width: max-content;
+    transition: transform 0.4s ease;
+    will-change: transform;
 }
 
 .flecha {
@@ -188,55 +211,26 @@ img {
     transition: 0.3s;
     z-index: 20;
 }
-.carrusel {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 60px 1fr 60px;
-    gap: 15px;
-    align-items: center;
+
+.flecha:hover {
+    background: #c1811f;
+    transform: scale(1.06);
 }
 
-.carrusel-ventana {
-    width: 100%;
-    overflow: hidden;
-}
-
-.menu-lista {
-    display: flex;
-    gap: 18px;
-    transition: transform 0.4s ease;
-} 
-
-.carrusel-ventana::-webkit-scrollbar {
-    display: none;
-}
-
-.menu-lista {
-    display: flex;
-    gap: 18px;
-    width: max-content;
-}
-
-.carrusel-ventana::-webkit-scrollbar {
-    height: 8px;
-}
-
-.carrusel-ventana::-webkit-scrollbar-thumb {
-    background: #4a2412;
-    border-radius: 10px;
-}
-.menu-lista::-webkit-scrollbar {
-    display: none;
-}
+/* TARJETAS */
 
 .tarjeta {
-    min-width: 220px;
     width: 220px;
+    min-width: 220px;
+    min-height: 430px;
     background: white;
     border: 1px solid #ead8c2;
     padding: 16px;
     text-align: center;
     box-shadow: 0 6px 18px rgba(66, 40, 20, 0.10);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .tarjeta img {
@@ -261,23 +255,8 @@ img {
 .tarjeta strong {
     color: #c1811f;
     font-size: 24px;
-}
-
-.flecha {
-    width: 50px;
-    height: 50px;
-    border: none;
-    background: #4a2412;
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
-    transition: 0.3s;
-    z-index: 20;
-}
-
-.flecha:hover {
-    background: #c1811f;
-    transform: scale(1.06);
+    display: block;
+    margin-top: auto;
 }
 
 /* NOSOTROS */
@@ -295,11 +274,10 @@ img {
 }
 
 .nosotros-imagen img {
-    width: 100%;
     height: 460px;
     object-fit: cover;
     border-radius: 18px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, .18);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
 }
 
 .nosotros-texto h2 {
@@ -320,12 +298,12 @@ img {
 }
 
 .beneficios div {
-    background: #ffffff;
+    background: white;
     padding: 25px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
-    transition: .3s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
 }
 
 .beneficios div:hover {
@@ -359,10 +337,10 @@ img {
 }
 
 .dato {
-    background: #ffffff;
+    background: white;
     padding: 22px;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .dato h3 {
@@ -380,7 +358,7 @@ img {
     height: 420px;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 /* FOOTER */
@@ -442,11 +420,6 @@ img {
 
     .beneficios {
         grid-template-columns: 1fr;
-    }
-
-    .tarjeta {
-        width: 220px;
-        min-width: 220px;
     }
 
     .contacto-mapa iframe {
@@ -520,6 +493,10 @@ img {
         padding: 75px 0;
     }
 
+    .menu + .menu {
+        padding-top: 35px;
+    }
+
     .titulo-seccion h2,
     .nosotros-texto h2 {
         font-size: 36px;
@@ -533,18 +510,19 @@ img {
     }
 
     .carrusel {
-        grid-template-columns: 42px 1fr 42px;
+        grid-template-columns: 45px 1fr 45px;
         gap: 8px;
     }
 
     .tarjeta {
         width: 260px;
         min-width: 260px;
+        min-height: 520px;
         padding: 18px;
     }
 
     .tarjeta img {
-        height: 160px;
+        height: 180px;
     }
 
     .tarjeta h3 {
@@ -611,57 +589,5 @@ img {
 
     .footer p {
         font-size: 18px;
-    }
-}
-
-
-.menu + .menu {
-    padding-top: 40px;
-}
-
-.menu:nth-of-type(even) {
-    background: #f8f1e8;
-}
-
-.carrusel {
-    margin-bottom: 20px;
-}
-
-.tarjeta {
-    min-height: 430px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.tarjeta img {
-    border-radius: 0;
-}
-
-.tarjeta strong {
-    display: block;
-    margin-top: auto;
-}
-
-.menu-lista {
-    will-change: transform;
-}
-
-/* CELULAR - CARRUSELES */
-@media (max-width: 700px) {
-    .menu + .menu {
-        padding-top: 35px;
-    }
-
-    .tarjeta {
-        min-height: 520px;
-    }
-
-    .tarjeta img {
-        height: 180px;
-    }
-
-    .carrusel {
-        grid-template-columns: 45px 1fr 45px;
     }
 }
